@@ -21,3 +21,11 @@ hr.solid {
 .faceMaskIconColor {
     color: #f0ad4e;
 }
+
+.deathIconColor {
+    color: #d9534f;
+}
+
+.recoveredIconColor {
+    color: #5cb85c;
+}
