@@ -1,0 +1,23 @@
+.dark-ui {
+    background-color: #141414;
+    color: aliceblue;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.light-ui {
+    background-color: #fff8f8;
+    color: #141414;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+hr.solid {
+    border-top: 3px solid #5bc0de;
+  }
+
+.globeIconColor {
+    color: #5bc0de;
+}
+
+.faceMaskIconColor {
+    color: #f0ad4e;
+}
