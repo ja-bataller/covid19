@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="searchbar.css">
+    <link rel="stylesheet" href="select.css">
     <link rel="stylesheet" href="button.css">
     <title>COVID-19 Tracker</title>
   </head>
@@ -69,15 +69,17 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="container mb-5">
-        <div class="search searchCountry">
-          <input type="search" id="search" class="search-box searchCountry" placeholder=" Search Country" autocomplete="off" />
-          <span class="search-button">
-          <span class="search-icon"></span>
-          </span>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+          <div class="container mt-5 mb-5">
+            <div class="select">
+              <select name="slct" id="slct">
+              </select>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="container">
         <button class="button button__outline--white aboutBtn"  data-toggle="modal" data-target="#aboutModal">
           About
@@ -129,6 +131,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
   </body>
+  <script src="script.js"></script>
 </html>
