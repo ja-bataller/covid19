@@ -29,3 +29,21 @@ hr.solid {
 .recoveredIconColor {
     color: #5cb85c;
 }
+
+.searchCountry {
+    text-transform: capitalize;
+}
+
+.aboutBtn {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+}
+
+.modalBG {
+    background-color: #141414;
+}
+
+.center{
+    text-align: center;
+}

@@ -28,8 +28,6 @@ $(".search-icon").click(function () {
         recovered.innerHTML = '';
         countryTitle.innerHTML = `<i class="fas fa-map-marker-alt globeIconColor"></i> `;
 
-
-
         if(data.message == "Not Found") {
 
             iziToast.error({
@@ -62,7 +60,7 @@ $(".search-icon").click(function () {
         console.log(err)
 
         iziToast.error({
-            title: "Country not found",
+            title: "SERVER ERROR",
             position: "topCenter",
             timeout: 3000,
         });

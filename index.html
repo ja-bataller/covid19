@@ -1,91 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="searchbar.css">
+    <link rel="stylesheet" href="button.css">
+
     <title>COVID-19 Tracker</title>
-</head>
-<body class="dark-ui">
-    
-        <div class="container">
-            <h1 class="mt-5 mb-4"><i class="fas fa-globe-asia globeIconColor"></i> Global COVID-19 Cases</h1>
-            <div class="row">
-                <div class="col-lg-4 mt-2 mb-5">
-                    <div class="card border-warning">
-                    <div class="card-body dark-ui">
-                        <h2 class="card-title"><i class="fas fa-head-side-mask faceMaskIconColor"></i> Active</h2>
-                        <h1 id="activeGlobal"></h1>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-2 mb-5">
-                    <div class="card border-danger">
-                    <div class="card-body dark-ui">
-                        <h2 class="card-title"><i class="fas fa-dizzy deathIconColor"></i> Deaths</h2>
-                        <h1 id="deathGlobal"></h1>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-2 mb-5">
-                    <div class="card border-success">
-                    <div class="card-body dark-ui">
-                        <h2 class="card-title"><i class="fas fa-child recoveredIconColor"></i> Recovered</h2>
-                        <h1 id="recoveredGlobal"></h1>
-                    </div>
-                    </div>
-                </div>
+  </head>
+  <body class="dark-ui">
+    <div class="container">
+      <h1 class="mt-5 mb-4"><i class="fas fa-globe-asia globeIconColor"></i> Global COVID-19 Cases</h1>
+      <div class="row">
+        <div class="col-lg-4 mt-2 mb-5">
+          <div class="card border-warning">
+            <div class="card-body dark-ui">
+              <h2 class="card-title"><i class="fas fa-head-side-mask faceMaskIconColor"></i> Active</h2>
+              <h1 id="activeGlobal"></h1>
             </div>
-
-            <hr class="solid">
-
-            <h1 id="country" class="mt-5 mb-4"><img src="https://www.countryflags.io/PH/flat/64.png"> </h1>
-            <div class="row">
-                <div class="col-lg-4 mt-2 mb-5">
-                    <div class="card border-warning">
-                    <div class="card-body dark-ui">
-                        <h2 class="card-title"><i class="fas fa-head-side-mask faceMaskIconColor"></i> Active</h2>
-                        <h1 id="active"></h1>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-2 mb-5">
-                    <div class="card border-danger">
-                    <div class="card-body dark-ui">
-                        <h2 class="card-title"><i class="fas fa-dizzy deathIconColor"></i> Deaths</h2>
-                        <h1 id="death"></h1>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-2 mb-5">
-                    <div class="card border-success">
-                    <div class="card-body dark-ui">
-                        <h2 class="card-title"><i class="fas fa-child recoveredIconColor"></i> Recovered</h2>
-                        <h1 id="recovered"></h1>
-                    </div>
-                    </div>
-                </div>
-            </div>
-              
-            <div class="search">
-                <input type="search" id="search" class="search-box" placeholder=" Search Country" autocomplete="off" />
-                <span class="search-button">
-                  <span class="search-icon"></span>
-                </span>
-            </div>
-
+          </div>
         </div>
+        <div class="col-lg-4 mt-2 mb-5">
+          <div class="card border-danger">
+            <div class="card-body dark-ui">
+              <h2 class="card-title"><i class="fas fa-dizzy deathIconColor"></i> Deaths</h2>
+              <h1 id="deathGlobal"></h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-2 mb-5">
+          <div class="card border-success">
+            <div class="card-body dark-ui">
+              <h2 class="card-title"><i class="fas fa-child recoveredIconColor"></i> Recovered</h2>
+              <h1 id="recoveredGlobal"></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="solid">
+      <h1 id="country" class="mt-5 mb-4"><img src="https://www.countryflags.io/PH/flat/64.png"> </h1>
+      <div class="row">
+        <div class="col-lg-4 mt-2 mb-5">
+          <div class="card border-warning">
+            <div class="card-body dark-ui">
+              <h2 class="card-title"><i class="fas fa-head-side-mask faceMaskIconColor"></i> Active</h2>
+              <h1 id="active"></h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-2 mb-5">
+          <div class="card border-danger">
+            <div class="card-body dark-ui">
+              <h2 class="card-title"><i class="fas fa-dizzy deathIconColor"></i> Deaths</h2>
+              <h1 id="death"></h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-2 mb-5">
+          <div class="card border-success">
+            <div class="card-body dark-ui">
+              <h2 class="card-title"><i class="fas fa-child recoveredIconColor"></i> Recovered</h2>
+              <h1 id="recovered"></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="search">
+        <input type="search" id="search" class="search-box searchCountry" placeholder=" Search Country" autocomplete="off" />
+        <span class="search-button">
+        <span class="search-icon"></span>
+        </span>
+      </div>
 
+    <button class="button button__outline--white aboutBtn"  data-toggle="modal" data-target="#aboutModal">
+        About
+         <g id="Group_22" data-name="Group 22" transform="translate(-40.21 -235.728)">
+             <line id="Line_11" class="arrow-stroke" data-name="Line 11" x1="15.063" transform="translate(40.56 241.426)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.7" />
+             <line id="Line_12" data-name="Line 12" y1="5.203" x2="5.203" transform="translate(50.42 241.426)" fill="none" stroke="#fff" stroke-linecap="round" class="arrow-stroke" stroke-linejoin="round" stroke-width="0.7" />
+             <line id="Line_13" data-name="Line 13" x2="5.203" y2="5.203" transform="translate(50.42 236.223)" fill="none" stroke="#fff" stroke-linecap="round" class="arrow-stroke" stroke-linejoin="round" stroke-width="0.7" />
+         </g>
+     </button>
+
+      <!-- About Modal -->
+      <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content modalBG">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel">About</h3>
+            </div>
+            <div class="modal-body center">
+              A simple COVID-19 application that let you track COVID-19 cases around the world.
+              <hr class="solid">
+              <div class="mb-3 center">
+                Thank you for using the app. I hope you like it!
+              </div>
+              <div class="center">
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:johnanthonybataller.ce@gmail.com" class="text-primary"> johnanthonybataller.ce@gmail.com</a>
+              </div>
+              <div class="center">
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/ja-bataller" class="text-primary" target="_blank"> github.com/ja-bataller</a>
+              </div>
+              <div class="center">
+                <i class="fas fa-user-circle"></i>
+                <a href="https://johnanthonybataller.netlify.app/" class="text-primary" target="_blank"> johnanthonybataller.netlify.app</a>
+              </div>
+              <div class="mt-3 center">
+                Created by: John Anthony Bataller
+              </div>
+            
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

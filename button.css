@@ -1,0 +1,44 @@
+
+  .button {
+    border: 1px solid;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 1rem;
+    background: transparent;
+    transition: all 0.2s;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+  }
+  .button svg {
+    transition: all 0.2s;
+  }
+  .button__outline--white {
+    color: #fff;
+    border-color: #fff;
+  }
+  .button__outline--white:hover {
+    color: #fff;
+  }
+  .button__outline--white:hover .arrow-stroke {
+    stroke: #000;
+  }
+  .button__outline--black {
+    color: #000;
+    border-color: #000;
+  }
+  .button__outline--black .arrow-stroke {
+    stroke: #000;
+  }
+  .button__outline--black:hover {
+    background: #000;
+    color: #fff;
+  }
+  .button__outline--black:hover .arrow-stroke {
+    stroke: #fff;
+  }
+  .button:hover {
+    padding: 1.2rem 1.5rem;
+  }
+  .button:hover svg {
+    padding-left: 0.7rem;
+  }
