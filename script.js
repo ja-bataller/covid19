@@ -14,7 +14,7 @@ $(".search-icon").click(function () {
         return
     }
     
-    fetch(`https://api.covid19api.com/dayone/country/${country}`)
+    fetch(`https://api.covid19api.com/live/country/${country}`)
     .then((res) => res.json())
     .then((data) => {
 
@@ -52,7 +52,7 @@ $(".search-icon").click(function () {
             death.append(data[index].Deaths);
             recovered.append(data[index].Recovered);
             countryTitle.innerHTML = `<img src="https://www.countryflags.io/${countryCode}/flat/64.png"> `;
-            countryTitle.append(data[index].Country);
+            countryTitle.append(data[index].Country + " COVID-19 Live Cases");
 
             document.querySelector("#search").value = "";
         }
@@ -96,7 +96,7 @@ fetch(`https://api.covid19api.com/summary`)
        
     })
 
-    fetch(`https://api.covid19api.com/dayone/country/Philippines`)
+    fetch(`https://api.covid19api.com/live/country/Philippines`)
     .then((res) => res.json())
     .then((data) => {
 
@@ -120,7 +120,7 @@ fetch(`https://api.covid19api.com/summary`)
             active.append(data[index].Confirmed);
             death.append(data[index].Deaths);
             recovered.append(data[index].Recovered);
-            countryTitle.append(data[index].Country);
+            countryTitle.append(data[index].Country + " COVID-19 Live Cases");
 
             document.querySelector("#search").value = "";
         }
