@@ -35,9 +35,9 @@ hr.solid {
 }
 
 .aboutBtn {
-    position: absolute;
-    bottom: 15px;
-    right: 20px;
+    position: relative;
+    float: right;
+    bottom: 20px;
 }
 
 .modalBG {

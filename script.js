@@ -14,7 +14,7 @@ $(".search-icon").click(function () {
         return
     }
     
-    fetch(`https://api.covid19api.com/total/dayone/country/${country}`)
+    fetch(`https://api.covid19api.com/dayone/country/${country}`)
     .then((res) => res.json())
     .then((data) => {
 
@@ -26,7 +26,7 @@ $(".search-icon").click(function () {
         active.innerHTML = '';
         death.innerHTML = '';
         recovered.innerHTML = '';
-        countryTitle.innerHTML = `<i class="fas fa-map-marker-alt globeIconColor"></i> `;
+        countryTitle.innerHTML = '';
 
         if(data.message == "Not Found") {
 
@@ -46,10 +46,12 @@ $(".search-icon").click(function () {
             const death = document.querySelector("#death");
             const recovered = document.querySelector("#recovered");
             const countryTitle = document.querySelector("#country");
+            const countryCode = data[index].CountryCode;
 
             active.append(data[index].Confirmed);
             death.append(data[index].Deaths);
             recovered.append(data[index].Recovered);
+            countryTitle.innerHTML = `<img src="https://www.countryflags.io/${countryCode}/flat/64.png"> `;
             countryTitle.append(data[index].Country);
 
             document.querySelector("#search").value = "";
@@ -94,7 +96,7 @@ fetch(`https://api.covid19api.com/summary`)
        
     })
 
-    fetch(`https://api.covid19api.com/total/dayone/country/Philippines`)
+    fetch(`https://api.covid19api.com/dayone/country/Philippines`)
     .then((res) => res.json())
     .then((data) => {
 

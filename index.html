@@ -11,12 +11,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="searchbar.css">
     <link rel="stylesheet" href="button.css">
-
     <title>COVID-19 Tracker</title>
   </head>
   <body class="dark-ui">
     <div class="container">
-      <h1 class="mt-5 mb-4"><i class="fas fa-globe-asia globeIconColor"></i> Global COVID-19 Cases</h1>
+      <h1 class="mt-5 mb-4"><img src="img/earth.png" alt="earth" width="65" height="65"> Global COVID-19 Cases</h1>
       <div class="row">
         <div class="col-lg-4 mt-2 mb-5">
           <div class="card border-warning">
@@ -62,7 +61,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 mt-2 mb-5">
+        <div class="col-lg-4 mt-2">
           <div class="card border-success">
             <div class="card-body dark-ui">
               <h2 class="card-title"><i class="fas fa-child recoveredIconColor"></i> Recovered</h2>
@@ -71,22 +70,24 @@
           </div>
         </div>
       </div>
-      <div class="search">
-        <input type="search" id="search" class="search-box searchCountry" placeholder=" Search Country" autocomplete="off" />
-        <span class="search-button">
-        <span class="search-icon"></span>
-        </span>
+      <div class="container mb-5">
+        <div class="search searchCountry">
+          <input type="search" id="search" class="search-box searchCountry" placeholder=" Search Country" autocomplete="off" />
+          <span class="search-button">
+          <span class="search-icon"></span>
+          </span>
+        </div>
       </div>
-
-    <button class="button button__outline--white aboutBtn"  data-toggle="modal" data-target="#aboutModal">
-        About
-         <g id="Group_22" data-name="Group 22" transform="translate(-40.21 -235.728)">
-             <line id="Line_11" class="arrow-stroke" data-name="Line 11" x1="15.063" transform="translate(40.56 241.426)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.7" />
-             <line id="Line_12" data-name="Line 12" y1="5.203" x2="5.203" transform="translate(50.42 241.426)" fill="none" stroke="#fff" stroke-linecap="round" class="arrow-stroke" stroke-linejoin="round" stroke-width="0.7" />
-             <line id="Line_13" data-name="Line 13" x2="5.203" y2="5.203" transform="translate(50.42 236.223)" fill="none" stroke="#fff" stroke-linecap="round" class="arrow-stroke" stroke-linejoin="round" stroke-width="0.7" />
-         </g>
-     </button>
-
+      <div class="container">
+        <button class="button button__outline--white aboutBtn"  data-toggle="modal" data-target="#aboutModal">
+          About
+          <g id="Group_22" data-name="Group 22" transform="translate(-40.21 -235.728)">
+            <line id="Line_11" class="arrow-stroke" data-name="Line 11" x1="15.063" transform="translate(40.56 241.426)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.7" />
+            <line id="Line_12" data-name="Line 12" y1="5.203" x2="5.203" transform="translate(50.42 241.426)" fill="none" stroke="#fff" stroke-linecap="round" class="arrow-stroke" stroke-linejoin="round" stroke-width="0.7" />
+            <line id="Line_13" data-name="Line 13" x2="5.203" y2="5.203" transform="translate(50.42 236.223)" fill="none" stroke="#fff" stroke-linecap="round" class="arrow-stroke" stroke-linejoin="round" stroke-width="0.7" />
+          </g>
+        </button>
+      </div>
       <!-- About Modal -->
       <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-lg" role="document">
@@ -115,7 +116,6 @@
               <div class="mt-3 center">
                 Created by: John Anthony Bataller
               </div>
-            
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -123,7 +123,6 @@
           </div>
         </div>
       </div>
-
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
