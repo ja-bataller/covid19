@@ -1,5 +1,9 @@
 const search = document.querySelector("#search");
 
+// FORMAT NUMBERS PUTTING A COMMA
+function formatNumber(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+  }
 
 $(".search-button").click(function () {
     $(this).parent().toggleClass("open");
@@ -48,9 +52,9 @@ $(".search-icon").click(function () {
             const countryTitle = document.querySelector("#country");
             const countryCode = data[index].CountryCode;
 
-            active.append(data[index].Confirmed);
-            death.append(data[index].Deaths);
-            recovered.append(data[index].Recovered);
+            active.append(formatNumber(data[index].Confirmed));
+            death.append(formatNumber(data[index].Deaths));
+            recovered.append(formatNumber(data[index].Recovered));
             countryTitle.innerHTML = `<img src="https://www.countryflags.io/${countryCode}/flat/64.png"> `;
             countryTitle.append(data[index].Country + " COVID-19 Live Cases");
 
@@ -88,9 +92,9 @@ fetch(`https://api.covid19api.com/summary`)
             const death = document.querySelector("#deathGlobal");
             const recovered = document.querySelector("#recoveredGlobal");
     
-            active.append(data.Global.TotalConfirmed);
-            death.append(data.Global.TotalDeaths);
-            recovered.append(data.Global.TotalRecovered);
+            active.append(formatNumber(data.Global.TotalConfirmed));
+            death.append(formatNumber(data.Global.TotalDeaths));
+            recovered.append(formatNumber(data.Global.TotalRecovered));
         }
 
        
@@ -117,9 +121,9 @@ fetch(`https://api.covid19api.com/summary`)
             const recovered = document.querySelector("#recovered");
             const countryTitle = document.querySelector("#country");
 
-            active.append(data[index].Confirmed);
-            death.append(data[index].Deaths);
-            recovered.append(data[index].Recovered);
+            active.append(formatNumber(data[index].Confirmed));
+            death.append(formatNumber(data[index].Deaths));
+            recovered.append(formatNumber(data[index].Recovered));
             countryTitle.append(data[index].Country + " COVID-19 Live Cases");
 
             document.querySelector("#search").value = "";
