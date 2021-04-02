@@ -1,77 +1,9 @@
 const search = document.querySelector("#search");
-
         
 // FORMAT NUMBERS PUTTING A COMMA
 function formatNumber(num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
   }
-
-$(".search-button").click(function () {
-    $(this).parent().toggleClass("open");
-  });
-
-$(".search-icon").click(function () {
-
-    const country = search.value;
-
-
-    if(country == ""){
-        return
-    }
-    
-    fetch(`https://api.covid19api.com/live/country/${country}`)
-    .then((res) => res.json())
-    .then((data) => {
-
-        const active = document.querySelector("#active");
-        const death = document.querySelector("#death");
-        const recovered = document.querySelector("#recovered");
-        const countryTitle = document.querySelector("#country");
-
-        active.innerHTML = '';
-        death.innerHTML = '';
-        recovered.innerHTML = '';
-        countryTitle.innerHTML = '';
-
-        if(data.message == "Not Found") {
-
-            iziToast.error({
-                title: "Country not found",
-                position: "topCenter",
-                timeout: 3000,
-            });
-
-
-        } else {
-            let length = data.length;
-            let index = length - 1;
-
-            const active = document.querySelector("#active");
-            const death = document.querySelector("#death");
-            const recovered = document.querySelector("#recovered");
-            const countryTitle = document.querySelector("#country");
-            const countryCode = data[index].CountryCode;
-
-            active.append(formatNumber(data[index].Confirmed));
-            death.append(formatNumber(data[index].Deaths));
-            recovered.append(formatNumber(data[index].Recovered));
-            countryTitle.innerHTML = `<img src="https://www.countryflags.io/${countryCode}/flat/64.png"> `;
-            countryTitle.append(data[index].Country + " COVID-19 Live Cases");
-
-        }
-    })
-
-    .catch(err => {
-        console.log(err)
-
-        iziToast.error({
-            title: "SERVER ERROR",
-            position: "topCenter",
-            timeout: 3000,
-        })
-    })
-
-});
 
     fetch(`https://api.covid19api.com/summary`)
     .then((res) => res.json())
@@ -128,11 +60,12 @@ $(".search-icon").click(function () {
     .catch(err => {
         console.log(err)
 
-        iziToast.error({
-            title: "Country not found",
-            position: "topCenter",
-            timeout: 3000,
-        });
+        Swal.fire({
+            title: 'Server Error!',
+            text: 'No data found',
+            icon: 'error',
+            confirmButtonText: 'Close'
+          })
     })
 
 
@@ -141,7 +74,6 @@ let countries;
 
 countriesList.addEventListener("change", newCountrySelection => {
     const selectedCountry = document.querySelector("#slct").value;
-    console.log(selectedCountry);
 
     fetch(`https://api.covid19api.com/live/country/${selectedCountry}`)
     .then((res) => res.json())
@@ -187,14 +119,14 @@ countriesList.addEventListener("change", newCountrySelection => {
     .catch(err => {
         console.log(err)
 
-        iziToast.error({
-            title: "SERVER ERROR",
-            position: "topCenter",
-            timeout: 3000,
-        })
+        Swal.fire({
+            title: 'Server Error!',
+            text: 'No data found',
+            icon: 'error',
+            confirmButtonText: 'Close'
+          })
     })
 });
-
 
 // GET COUNTRY - REST COUNTRY API
 fetch("https://restcountries.eu/rest/v2/all")
